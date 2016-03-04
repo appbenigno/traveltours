@@ -56,6 +56,14 @@ namespace Travel_Tours
             if (qr.isExist("USER_CREDENTIALS", "U_NAME", txtUsername.Text, "U_PASS", txtPassword.Text))
             {
                 MessageBox.Show("found");
+                Credentials.StoreCredentials(
+                    txtUsername.Text,
+                    qr.getData("USER_CREDENTIALS", "U_NAME", txtUsername.Text, "U_EMAIL"),
+                    qr.getData("USER_CREDENTIALS", "U_NAME", txtUsername.Text, "U_GIVENNAME"),
+                    qr.getData("USER_CREDENTIALS", "U_NAME", txtUsername.Text, "U_FAMILYNAME"),
+                    qr.getData("USER_CREDENTIALS", "U_NAME", txtUsername.Text, "U_POSITION")
+                    );
+                MessageBox.Show(Credentials.GivenName + " " + Credentials.FamilyName);
             }
             else
             {
