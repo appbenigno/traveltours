@@ -35,5 +35,18 @@ namespace Travel_Tours
                 return commandLine;
             }
         }
+
+        private static Form controlPanel;
+        public static Form CP
+        {
+            get
+            {
+                if (controlPanel == null)
+                {
+                    controlPanel = new frmCLI();
+                }
+                return controlPanel;
+            }
+        }
     }
 }

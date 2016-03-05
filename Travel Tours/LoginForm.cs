@@ -31,11 +31,6 @@ namespace Travel_Tours
             
         }
 
-        private void txtCLI_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            
-        }
-
         private void LoginForm_FormClosing(object sender, FormClosingEventArgs e)
         {
             if (e.CloseReason == CloseReason.UserClosing)
