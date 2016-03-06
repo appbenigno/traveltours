@@ -8,6 +8,8 @@ namespace SQL_Lib
 {
     interface iStoredProc
     {
-        void initializeDefaults();
+        void CreateStoredProcedure(string procedureName, string procedureParameters);
+        void ExecuteStoredProcedure(string procedureName, string procedureParameters);
+        void ExecuteStoredProcedure(string procedureName);
     }
 }

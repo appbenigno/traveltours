@@ -43,7 +43,7 @@ namespace Travel_Tours
             {
                 if (controlPanel == null)
                 {
-                    controlPanel = new frmCLI();
+                    controlPanel = new frmControlPanel();
                 }
                 return controlPanel;
             }

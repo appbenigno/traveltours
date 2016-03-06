@@ -9,7 +9,7 @@ using System.Windows.Forms;
 
 namespace SQL_Lib
 {
-    public class Query : Connections, iQuery
+    public class Query : Connections, iQuery, iConnect
     {
         Connections connection;
         public Query()
@@ -62,7 +62,7 @@ namespace SQL_Lib
         /// <param name="targetDataGridView"></param>
         public void CommandExec(string selectCommand, DataGridView targetDataGridView)
         {
-            SqlConnection conn = new SqlConnection(ConnectString);
+            SqlConnection conn = new SqlConnection(ConnectString());
             SqlCommand cmd = new SqlCommand(selectCommand, conn);
             conn.Open();
             try
@@ -92,7 +92,7 @@ namespace SQL_Lib
         /// 
         public void CommandExec(TextBox selectCommandFromTextBox, DataGridView targetDataGridView)
         {
-            SqlConnection conn = new SqlConnection(ConnectString);
+            SqlConnection conn = new SqlConnection(ConnectString());
             SqlCommand cmd = new SqlCommand(selectCommandFromTextBox.Text, conn);
             conn.Open();
             try
@@ -153,9 +153,9 @@ namespace SQL_Lib
         {
             Command = @"SELECT * FROM " + tableName + " WHERE " + primaryKeyField + " = '" + primaryKeyValue + "'";
             string result = "";
-            SqlConnection cnn = new SqlConnection(this.ConnectString);
-            SqlCommand command = new SqlCommand(this.Command, cnn);
-            cnn.Open();
+            SqlConnection conn = new SqlConnection(this.ConnectString());
+            SqlCommand command = new SqlCommand(this.Command, conn);
+            conn.Open();
             try
             {
                 SqlDataReader read = command.ExecuteReader();
@@ -171,7 +171,7 @@ namespace SQL_Lib
             }
             finally
             {
-                cnn.Close();
+                conn.Close();
             }
             return result;
         }
@@ -179,14 +179,11 @@ namespace SQL_Lib
         /// <summary>
         /// Connection String
         /// </summary>
-        /// 
-        public string ConnectString
+        /// <returns></returns>
+        public string ConnectString()
         {
-            get
-            {
-                //Data Source=FAMILY-PC\SQLEXPRESS;Initial Catalog=EX_5;Integrated Security=True
-                return string.Concat("Data Source=", Connection.ServerName, ";Initial Catalog=", Connection.DatabaseName, ";Integrated Security=True");
-            }
+            //Data Source=FAMILY-PC\SQLEXPRESS;Initial Catalog=EX_5;Integrated Security=True
+            return string.Concat("Data Source=", Connection.ServerName, ";Initial Catalog=", Connection.DatabaseName, ";Integrated Security=True");
         }
     }
 }

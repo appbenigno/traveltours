@@ -20,7 +20,7 @@ namespace Travel_Tours
         /// 
         Query qr = new Query(new Connections("FAMILY-PC\\SQLEXPRESS", "ELMANJOVIN_TRAVEL_AND_TOURS"));
         //------------------------------------------------------
-
+        StoredProc sp = new StoredProc();
         public LoginForm()
         {
             InitializeComponent();
@@ -28,7 +28,7 @@ namespace Travel_Tours
 
         private void LoginForm_Load(object sender, EventArgs e)
         {
-            
+            SQL_Lib.SQL_Lib.initializeStoredProcedures(qr.Connection);
         }
 
         private void LoginForm_FormClosing(object sender, FormClosingEventArgs e)
