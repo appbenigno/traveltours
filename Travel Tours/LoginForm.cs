@@ -18,7 +18,7 @@ namespace Travel_Tours
         /// Database Connection Settings
         /// </summary>
         /// 
-        Query qr = new Query(new Connections("FAMILY-PC\\SQLEXPRESS", "ELMANJOVIN_TRAVEL_AND_TOURS"));
+        Query qr = new Query(new Connections(".\\SQLEXPRESS", "ELMANJOVIN_TRAVEL_AND_TOURS"));
         //------------------------------------------------------
         StoredProc sp = new StoredProc();
         public LoginForm()
