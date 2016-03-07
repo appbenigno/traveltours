@@ -48,5 +48,18 @@ namespace Travel_Tours
                 return controlPanel;
             }
         }
+
+        private static Form tourInfo;
+        public static Form TI
+        {
+            get
+            {
+                if (tourInfo == null)
+                {
+                    tourInfo = new Tour_Information();
+                }
+                return tourInfo;
+            }
+        }
     }
 }
