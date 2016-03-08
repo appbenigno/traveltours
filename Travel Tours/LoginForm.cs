@@ -48,9 +48,8 @@ namespace Travel_Tours
 
         private void btnLogin_Click(object sender, EventArgs e)
         {
-            if (qr.isExist("USER_CREDENTIALS", "U_NAME", txtUsername.Text, "U_PASS", txtPassword.Text))
+            if (qr.isExist("USER_CREDENTIALS", "U_NAME", txtUsername.Text, "U_PASS", txtPassword.Text) && txtUsername.Text != "" && txtPassword.Text != "")
             {
-                MessageBox.Show("found");
                 Credentials.StoreCredentials(
                     txtUsername.Text,
                     qr.getData("USER_CREDENTIALS", "U_NAME", txtUsername.Text, "U_EMAIL"),
@@ -58,11 +57,12 @@ namespace Travel_Tours
                     qr.getData("USER_CREDENTIALS", "U_NAME", txtUsername.Text, "U_FAMILYNAME"),
                     qr.getData("USER_CREDENTIALS", "U_NAME", txtUsername.Text, "U_POSITION")
                     );
-                MessageBox.Show(Credentials.GivenName + " " + Credentials.FamilyName);
+                WinForms.CP.Show();
+                WinForms.LF.Hide();
             }
             else
             {
-                MessageBox.Show("not found");
+                MessageBox.Show("Invalid user name or password!","Invalid Credentials",MessageBoxButtons.OK,MessageBoxIcon.Exclamation);
             }
         }
     }

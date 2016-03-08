@@ -58,6 +58,7 @@
     <Compile Include="ControlPanel.Designer.cs">
       <DependentUpon>ControlPanel.cs</DependentUpon>
     </Compile>
+    <Compile Include="iTour.cs" />
     <Compile Include="LoginForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -72,6 +73,7 @@
     <Compile Include="Tour Information.designer.cs">
       <DependentUpon>Tour Information.cs</DependentUpon>
     </Compile>
+    <Compile Include="Tours.cs" />
     <Compile Include="WinForms.cs" />
     <EmbeddedResource Include="CLI.resx">
       <DependentUpon>CLI.cs</DependentUpon>
