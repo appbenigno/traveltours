@@ -17,6 +17,8 @@ namespace Travel_Tours
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(WinForms.LF);
+            //Application.Run(WinForms.CL);
+            //Application.Run(new Information_Viewer());
         }
     }
 }

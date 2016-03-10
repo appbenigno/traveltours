@@ -49,16 +49,16 @@ namespace Travel_Tours
             }
         }
 
-        private static Form tourInfo;
-        public static Form TI
+        private static Form infoView;
+        public static Form IV
         {
             get
             {
-                if (tourInfo == null)
+                if (infoView == null)
                 {
-                    tourInfo = new Tour_Information();
+                    infoView = new Information_Viewer();
                 }
-                return tourInfo;
+                return infoView;
             }
         }
     }

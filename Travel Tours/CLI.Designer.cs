@@ -36,7 +36,6 @@
             // 
             // txtCLI
             // 
-            this.txtCLI.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtCLI.Location = new System.Drawing.Point(12, 329);
             this.txtCLI.Name = "txtCLI";
             this.txtCLI.Size = new System.Drawing.Size(760, 20);

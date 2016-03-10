@@ -57,6 +57,8 @@
             this.comboBox_Information_Viewer.Name = "comboBox_Information_Viewer";
             this.comboBox_Information_Viewer.Size = new System.Drawing.Size(159, 21);
             this.comboBox_Information_Viewer.TabIndex = 1;
+            this.comboBox_Information_Viewer.Text = "Tour Information";
+            this.comboBox_Information_Viewer.SelectedIndexChanged += new System.EventHandler(this.comboBox_Information_Viewer_SelectedIndexChanged);
             // 
             // label1
             // 
@@ -117,6 +119,8 @@
             this.Controls.Add(this.Elmanjovin_Database_Viewer);
             this.Name = "Information_Viewer";
             this.Text = "Tour Information Viewer";
+            this.Activated += new System.EventHandler(this.Information_Viewer_Activated);
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Information_Viewer_FormClosing);
             this.Load += new System.EventHandler(this.Information_Viewer_Load);
             ((System.ComponentModel.ISupportInitialize)(this.Elmanjovin_Database_Viewer)).EndInit();
             this.ResumeLayout(false);

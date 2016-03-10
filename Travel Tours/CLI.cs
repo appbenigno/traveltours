@@ -28,7 +28,7 @@ namespace Travel_Tours
 
         private void btnExecute_Click(object sender, EventArgs e)
         {
-            MessageBox.Show(qr.isExist("ITINERARY_INFORMATION", "TOUR_ITINERARY_CODE", "2000", "TOUR_CODE", "100").GetHashCode().ToString());
+            qr.CommandExec(txtCLI.Text, dataGridSched);
         }
 
         private void txtCLI_KeyPress(object sender, KeyPressEventArgs e)

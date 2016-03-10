@@ -24,7 +24,7 @@ namespace Travel_Tours
             {
                 e.Cancel = true;
                 WinForms.CP.Hide();
-                WinForms.TI.Hide();
+                WinForms.IV.Hide();
                 WinForms.LF.Show();
             }
             else
@@ -43,7 +43,7 @@ namespace Travel_Tours
 
         private void btnViewTours_Click(object sender, EventArgs e)
         {
-            WinForms.TI.Show();
+            WinForms.IV.Show();
         }
     }
 }

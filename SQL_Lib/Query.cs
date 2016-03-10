@@ -39,18 +39,17 @@ namespace SQL_Lib
                 connection = value;
             }
         }
-
-        public void Add()
+        public void Add(int Tour_Code, string Company_Information, string Tour_Start_Date, string Tour_End_Date, int Number_Of_Passengers, int Number_Of_Tour_Guides, int Number_Of_Buses)
         {
             throw new NotImplementedException();
         }
 
-        public void Delete()
+        public void Edit(string Value_To_Be_Edited)
         {
             throw new NotImplementedException();
         }
 
-        public void Edit()
+        public void Delete(int Key_Identifier)
         {
             throw new NotImplementedException();
         }

@@ -29,6 +29,7 @@ namespace Travel_Tours
         private void LoginForm_Load(object sender, EventArgs e)
         {
             SQL_Lib.SQL_Lib.initializeStoredProcedures(qr.Connection);
+            Tours.initializeStoredProcedures(qr.Connection);
         }
 
         private void LoginForm_FormClosing(object sender, FormClosingEventArgs e)
