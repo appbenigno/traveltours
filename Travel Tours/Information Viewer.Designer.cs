@@ -79,6 +79,17 @@
             // comboBox_Ordering
             // 
             this.comboBox_Ordering.FormattingEnabled = true;
+            this.comboBox_Ordering.Items.AddRange(new object[] {
+            "By Tour code (ASCENDING)",
+            "By Tour code (DESCENDING)",
+            "By Tour date (ASCENDING)",
+            "By Tour date (DESCENDING)",
+            "By Number of passengers (ASCENDING)",
+            "By Number of passengers (DESCENDING)",
+            "By Tour guide\'s Last name (ASCENDING)",
+            "By Tour guide\'s Last name (DESCENDING)",
+            "By Bus number (ASCENDING)",
+            "By Bus number (DESCENDING)"});
             this.comboBox_Ordering.Location = new System.Drawing.Point(177, 37);
             this.comboBox_Ordering.Name = "comboBox_Ordering";
             this.comboBox_Ordering.Size = new System.Drawing.Size(121, 21);
