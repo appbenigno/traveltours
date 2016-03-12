@@ -46,6 +46,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Add_Itinerary.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Add_Itinerary.Designer.cs">
+      <DependentUpon>Add_Itinerary.cs</DependentUpon>
+    </Compile>
     <Compile Include="CLI.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -87,6 +93,9 @@
     </Compile>
     <Compile Include="Tours.cs" />
     <Compile Include="WinForms.cs" />
+    <EmbeddedResource Include="Add_Itinerary.resx">
+      <DependentUpon>Add_Itinerary.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="CLI.resx">
       <DependentUpon>CLI.cs</DependentUpon>
     </EmbeddedResource>
