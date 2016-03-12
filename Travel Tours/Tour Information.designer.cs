@@ -187,6 +187,7 @@
             this.Itineraries_Button.TabIndex = 17;
             this.Itineraries_Button.Text = "Itineraries";
             this.Itineraries_Button.UseVisualStyleBackColor = true;
+            this.Itineraries_Button.Click += new System.EventHandler(this.Itineraries_Button_Click);
             // 
             // Cancel_Button
             // 

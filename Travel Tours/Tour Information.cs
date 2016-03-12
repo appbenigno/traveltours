@@ -27,5 +27,11 @@ namespace Travel_Tours
             //Hue Hue Hue
 
         }
+
+        private void Itineraries_Button_Click(object sender, EventArgs e)
+        {
+            Add_Itinerary Itinerary_Window = new Add_Itinerary();
+            Itinerary_Window.Show();
+        }
     }
 }

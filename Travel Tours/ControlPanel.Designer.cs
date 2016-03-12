@@ -36,6 +36,7 @@
             this.statusLabelPosition = new System.Windows.Forms.ToolStripStatusLabel();
             this.btnManageUsers = new System.Windows.Forms.Button();
             this.btnViewTours = new System.Windows.Forms.Button();
+            this.buttonADD_TOUR = new System.Windows.Forms.Button();
             this.statusStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -47,7 +48,7 @@
             this.toolStripStatusLabel2,
             this.toolStripStatusLabel3,
             this.statusLabelPosition});
-            this.statusStrip1.Location = new System.Drawing.Point(0, 142);
+            this.statusStrip1.Location = new System.Drawing.Point(0, 214);
             this.statusStrip1.Name = "statusStrip1";
             this.statusStrip1.Size = new System.Drawing.Size(427, 22);
             this.statusStrip1.TabIndex = 0;
@@ -95,7 +96,7 @@
             // 
             // btnViewTours
             // 
-            this.btnViewTours.Location = new System.Drawing.Point(116, 72);
+            this.btnViewTours.Location = new System.Drawing.Point(116, 117);
             this.btnViewTours.Name = "btnViewTours";
             this.btnViewTours.Size = new System.Drawing.Size(205, 39);
             this.btnViewTours.TabIndex = 2;
@@ -103,11 +104,22 @@
             this.btnViewTours.UseVisualStyleBackColor = true;
             this.btnViewTours.Click += new System.EventHandler(this.btnViewTours_Click);
             // 
+            // buttonADD_TOUR
+            // 
+            this.buttonADD_TOUR.Location = new System.Drawing.Point(116, 72);
+            this.buttonADD_TOUR.Name = "buttonADD_TOUR";
+            this.buttonADD_TOUR.Size = new System.Drawing.Size(205, 39);
+            this.buttonADD_TOUR.TabIndex = 3;
+            this.buttonADD_TOUR.Text = "ADD TOUR";
+            this.buttonADD_TOUR.UseVisualStyleBackColor = true;
+            this.buttonADD_TOUR.Click += new System.EventHandler(this.buttonADD_TOUR_Click);
+            // 
             // frmControlPanel
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(427, 164);
+            this.ClientSize = new System.Drawing.Size(427, 236);
+            this.Controls.Add(this.buttonADD_TOUR);
             this.Controls.Add(this.btnViewTours);
             this.Controls.Add(this.btnManageUsers);
             this.Controls.Add(this.statusStrip1);
@@ -133,5 +145,6 @@
         private System.Windows.Forms.ToolStripStatusLabel statusLabelPosition;
         private System.Windows.Forms.Button btnManageUsers;
         private System.Windows.Forms.Button btnViewTours;
+        private System.Windows.Forms.Button buttonADD_TOUR;
     }
 }

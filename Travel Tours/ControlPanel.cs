@@ -45,5 +45,12 @@ namespace Travel_Tours
         {
             WinForms.IV.Show();
         }
+
+        private void buttonADD_TOUR_Click(object sender, EventArgs e)
+        {
+            Tour_Information Tour_Information_Window = new Tour_Information();
+
+            Tour_Information_Window.Show();
+        }
     }
 }
