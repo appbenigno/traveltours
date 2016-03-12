@@ -41,7 +41,39 @@ namespace SQL_Lib
         }
         public void Add(int Tour_Code, string Company_Information, string Tour_Start_Date, string Tour_End_Date, int Number_Of_Passengers, int Number_Of_Tour_Guides, int Number_Of_Buses)
         {
-            throw new NotImplementedException();
+            try
+            {
+                SqlConnection ADD_CONNECTION = new SqlConnection(ConnectString());
+                SqlCommand ADD_COMMAND = new SqlCommand ("INSERT INTO TOUR_INFORMATION (TOUR_CODE, TOUR_START, TOUR_END, PERSONNEL_TOURED, TOTAL_NUMBER_OF_PAX, TOTAL_NUMBER_OF_BUSES, TOUR_FACILITATORS) VALUES (@TOUR_CODE, @TOUR_START, @TOUR_END, @PERSONNEL_TOURED, @TOTAL_NUMBER_OF_PAX, @TOTAL_NUMBER_OF_BUSES, @TOUR_FACILITATORS)");
+                ADD_COMMAND.CommandType = CommandType.Text;
+                ADD_COMMAND.Connection = ADD_CONNECTION;
+                ADD_COMMAND.Parameters.AddWithValue("@TOUR_CODE", Tour_Code);
+                ADD_COMMAND.Parameters.AddWithValue("@TOUR_START", Tour_Start_Date);
+                ADD_COMMAND.Parameters.AddWithValue("@TOUR_END", Tour_End_Date);
+                ADD_COMMAND.Parameters.AddWithValue("@PERSONNEL_TOURED", Company_Information);
+                ADD_COMMAND.Parameters.AddWithValue("@TOTAL_NUMBER_OF_PAX", Number_Of_Passengers);
+                ADD_COMMAND.Parameters.AddWithValue("@TOTAL_NUMBER_OF_BUSES", Number_Of_Buses);
+                ADD_COMMAND.Parameters.AddWithValue("@TOUR_FACILITATORS", Number_Of_Tour_Guides);
+            }
+
+            catch(Exception ADD_EXCEPTION)
+            {
+                MessageBox.Show(ADD_EXCEPTION.Message.ToString());
+            }
+            /*
+            {
+            SqlCommand cmd = new SqlCommand("INSERT INTO Data (Name, PhoneNo, Address) VALUES (@Name, @PhoneNo, @Address)");
+             cmd.CommandType = CommandType.Text;
+             cmd.Connection = connection;
+             cmd.Parameters.AddWithValue("@Name", txtName.Text);
+             cmd.Parameters.AddWithValue("@PhoneNo", txtPhone.Text);
+             cmd.Parameters.AddWithValue("@Address", txtAddress.Text);
+             connection.Open();
+             cmd.ExecuteNonQuery();
+}
+            */
+
+
         }
 
         public void Edit(string Value_To_Be_Edited)
