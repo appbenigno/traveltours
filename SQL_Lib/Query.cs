@@ -92,20 +92,50 @@ namespace SQL_Lib
                 Expected Time of Arrival = Column_ETA
                 Expected Time of Departure = Column_ETD
                 Itinerary Descprtion = Column_IT_Comments_Description
+             * 
+             * string StrQuery;
+try
+{
+    using (SqlConnection conn = new SqlConnection(ConnString))
+    {
+        using (SqlCommand comm = new SqlCommand())
+        {
+            comm.Connection = conn;
+            conn.Open();
+            for(int i=0; i< dataGridView1.Rows.Count;i++)
+            {
+                StrQuery= @"INSERT INTO tableName VALUES (" 
+                    + dataGridView1.Rows[i].Cells["ColumnName"].Value +", " 
+                    + dataGridView1.Rows[i].Cells["ColumnName"].Value +");";
+                comm.CommandText = StrQuery;
+                comm.ExecuteNonQuery();
+            }
+        }
+    }
+}
              */
 
-            SqlConnection ITINERARY_CONNECTION = new SqlConnection(ConnectString());
-            SqlCommand ITINERARY_COMMAND = new SqlCommand();
+           using (SqlConnection ITINERARY_CONNECTION = new SqlConnection(ConnectString()))
+           {
+               using(SqlCommand ITINERARY_COMMAND = new SqlCommand())
+               {
+                    ITINERARY_COMMAND.Connection = ITINERARY_CONNECTION;
 
-            ITINERARY_COMMAND.Connection = ITINERARY_CONNECTION;
+                    ITINERARY_CONNECTION.Open();
 
-            ITINERARY_CONNECTION.Open();
+                    for (int i = 0; i < ITINERARY_DATAGRID.Rows.Count - 1; i++ )
+                    {
+                        int Column_IT_CODE = (int)ITINERARY_DATAGRID.Rows[i].Cells["Column_IT_CODE"].Value;
+                        int Column_IT_TOURCODE = (int)ITINERARY_DATAGRID.Rows[i].Cells["Column_TourCode"].Value;
 
-            for (int i = 0; i < ITINERARY_DATAGRID.Rows.Count; i++ )
-            {
-                ITINERARY_COMMAND.CommandText = @"INSERT INTO ITINERARY_INFORMATION VALUES (" + ITINERARY_DATAGRID.Rows[i].Cells["Column_IT_CODE"].Value + ", " + ITINERARY_DATAGRID.Rows[i].Cells["Column_TourCode"].Value + ", "+ ITINERARY_DATAGRID.Rows[i].Cells["Column_TourCode"].Value +", "+ ITINERARY_DATAGRID.Rows[i].Cells["Column_IT_Name"]+", " + ITINERARY_DATAGRID.Rows[i].Cells["Column_ETA"].Value +", " + ITINERARY_DATAGRID.Rows[i].Cells["Column_ETD"].Value + ", " + ITINERARY_DATAGRID.Rows[i].Cells.["Column_IT_Comments_Description"].Value +")";
-                ITINERARY_COMMAND.ExecuteNonQuery();
-            }
+                        ITINERARY_COMMAND.CommandText = @"INSERT INTO ITINERARY_INFORMATION VALUES (" + Column_IT_CODE + ", " + Column_IT_TOURCODE + ", '" + ITINERARY_DATAGRID.Rows[i].Cells["Column_IT_Name"].Value + "', '" + ITINERARY_DATAGRID.Rows[i].Cells["Column_ETA"].Value + "', '" + ITINERARY_DATAGRID.Rows[i].Cells["Column_ETD"].Value + "', '" + ITINERARY_DATAGRID.Rows[i].Cells["Column_IT_Comments_Description"].Value + "')";
+                        ITINERARY_COMMAND.ExecuteNonQuery();
+                    }
+               }
+           }
+            
+
+           
         }
 
         public int Increment_Counter(string INFORMATION_CODE, string DATABASE_TABLE_NAME)
