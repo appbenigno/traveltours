@@ -72,7 +72,7 @@
             // 
             // button_Edit_Info
             // 
-            this.button_Edit_Info.Location = new System.Drawing.Point(12, 94);
+            this.button_Edit_Info.Location = new System.Drawing.Point(15, 127);
             this.button_Edit_Info.Name = "button_Edit_Info";
             this.button_Edit_Info.Size = new System.Drawing.Size(159, 23);
             this.button_Edit_Info.TabIndex = 3;
