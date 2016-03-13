@@ -45,7 +45,6 @@ namespace Travel_Tours
 
             try
             {
-
                 SQL_Lib.Query AddTour = new SQL_Lib.Query();
                 AddTour.Add(1002, textBox_CompanyInfo.Text, dateTimePicker_START.Value.Date, dateTimePicker_END.Value.Date, int.Parse(textBox_PAX.Text), int.Parse(textBox_Num_Tour_Guides.Text), int.Parse(textBox_Num_Buses.Text));
                 MessageBox.Show("Tour added! you can now put in itineraries, click the 'Itineraries' button to start.");
