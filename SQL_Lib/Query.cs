@@ -115,15 +115,15 @@ try
 }
              */
 
-           using (SqlConnection ITINERARY_CONNECTION = new SqlConnection(ConnectString()))
-           {
-               using(SqlCommand ITINERARY_COMMAND = new SqlCommand())
-               {
+            using (SqlConnection ITINERARY_CONNECTION = new SqlConnection(ConnectString()))
+            {
+                using (SqlCommand ITINERARY_COMMAND = new SqlCommand())
+                {
                     ITINERARY_COMMAND.Connection = ITINERARY_CONNECTION;
 
                     ITINERARY_CONNECTION.Open();
 
-                    for (int i = 0; i < ITINERARY_DATAGRID.Rows.Count - 1; i++ )
+                    for (int i = 0; i < ITINERARY_DATAGRID.Rows.Count - 1; i++)
                     {
                         int Column_IT_CODE = (int)ITINERARY_DATAGRID.Rows[i].Cells["Column_IT_CODE"].Value;
                         int Column_IT_TOURCODE = (int)ITINERARY_DATAGRID.Rows[i].Cells["Column_TourCode"].Value;
@@ -131,11 +131,79 @@ try
                         ITINERARY_COMMAND.CommandText = @"INSERT INTO ITINERARY_INFORMATION VALUES (" + Column_IT_CODE + ", " + Column_IT_TOURCODE + ", '" + ITINERARY_DATAGRID.Rows[i].Cells["Column_IT_Name"].Value + "', '" + ITINERARY_DATAGRID.Rows[i].Cells["Column_ETA"].Value + "', '" + ITINERARY_DATAGRID.Rows[i].Cells["Column_ETD"].Value + "', '" + ITINERARY_DATAGRID.Rows[i].Cells["Column_IT_Comments_Description"].Value + "')";
                         ITINERARY_COMMAND.ExecuteNonQuery();
                     }
+                }
+            }
+        }
+
+
+        public void ADD_TOUR_GUIDE(DataGridView TOUR_GUIDE_DATAGRID)
+        {
+
+           using (SqlConnection TOUR_GUIDE_CONNECTION = new SqlConnection(ConnectString()))
+           {
+               using(SqlCommand TOUR_GUIDE_COMMAND = new SqlCommand())
+               {
+                    TOUR_GUIDE_COMMAND.Connection = TOUR_GUIDE_CONNECTION;
+
+                    TOUR_GUIDE_CONNECTION.Open();
+
+                    for (int i = 0; i < TOUR_GUIDE_DATAGRID.Rows.Count - 1; i++ )
+                    {
+                        int Column_TOUR_GUIDE_CODE = (int)TOUR_GUIDE_DATAGRID.Rows[i].Cells["Column_TourGuide_ID"].Value;
+                        int Column_TOUR_GUIDE_TOURCODE = (int)TOUR_GUIDE_DATAGRID.Rows[i].Cells["Column_TourGuide_TourCode"].Value;
+
+                        TOUR_GUIDE_COMMAND.CommandText = @"INSERT INTO TOUR_GUIDES VALUES (" + Column_TOUR_GUIDE_CODE + ", " + Column_TOUR_GUIDE_TOURCODE + ", '" + TOUR_GUIDE_DATAGRID.Rows[i].Cells["Column_Assigned_Bus_Number"].Value + "', '" + TOUR_GUIDE_DATAGRID.Rows[i].Cells["ColumnTourGuide_LName"].Value + "', '" + TOUR_GUIDE_DATAGRID.Rows[i].Cells["Column_TourGuide_FName"].Value + "')";
+                        TOUR_GUIDE_COMMAND.ExecuteNonQuery();
+
+                        /*
+                         *  Tour Guide Information
+
+ Tour Guide ID = Column_TourGuide_ID
+ Tour Code = Column_TourGuide_TourCode
+ Bus Number Assigned = Column_Assigned_Bus_Number
+ Tour Guide's Last Name = ColumnTourGuide_LName
+ Tour Guide's First Name = Column_TourGuide_FName
+                         * 
+                         */
+                    }
                }
            }
-            
+        }
 
-           
+        public void BUS_INFORMATION(DataGridView BUS_INFORMATION_DATAGRID)
+        {
+
+            using (SqlConnection BUS_INFORMATION_CONNECTION = new SqlConnection(ConnectString()))
+            {
+                using (SqlCommand BUS_INFORMATION_COMMAND = new SqlCommand())
+                {
+                    BUS_INFORMATION_COMMAND.Connection = BUS_INFORMATION_CONNECTION;
+
+                    BUS_INFORMATION_CONNECTION.Open();
+
+                    for (int i = 0; i < BUS_INFORMATION_DATAGRID.Rows.Count - 1; i++)
+                    {
+                        int Column_BUS_INFORMATION_CODE = (int)BUS_INFORMATION_DATAGRID.Rows[i].Cells["Column_TourGuide_ID"].Value;
+                        int Column_BUS_INFORMATION_TOURCODE = (int)BUS_INFORMATION_DATAGRID.Rows[i].Cells["Column_TourGuide_TourCode"].Value;
+
+                        BUS_INFORMATION_COMMAND.CommandText = @"INSERT INTO TOUR_GUIDES VALUES (" + Column_BUS_INFORMATION_CODE + ", " + Column_BUS_INFORMATION_TOURCODE + ", '" + BUS_INFORMATION_DATAGRID.Rows[i].Cells["ColumnBusNumber"].Value + "', '" + BUS_INFORMATION_DATAGRID.Rows[i].Cells["ColumnBusPlateNumber"].Value + "', '" + BUS_INFORMATION_DATAGRID.Rows[i].Cells["ColumnBusPaxTotal"].Value + "', '" + BUS_INFORMATION_DATAGRID.Rows[i].Cells["ColumnBusAssignedTourGuideLName"].Value + "', '" + BUS_INFORMATION_DATAGRID.Rows[i].Cells["ColumnBusAssignedTourGuideFName"].Value + "')";
+                        BUS_INFORMATION_COMMAND.ExecuteNonQuery();
+
+                        /*
+                         *  Bus Information
+
+ Bus Info ID = Column_BusInfoID
+ Tour Code = ColumnTourCode
+ Bus Number = ColumnBusNumber
+ Bus Plate Number = ColumnBusPlateNumber
+ Number of Passengers = ColumnBusPaxTotal
+ Tour Guide's Last Name = ColumnBusAssignedTourGuideLName
+ Tour Guide's First Name = ColumnBusAssignedTourGuideFName
+                         * 
+                         */
+                    }
+                }
+            }
         }
 
         public int Increment_Counter(string INFORMATION_CODE, string DATABASE_TABLE_NAME)

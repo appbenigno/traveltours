@@ -77,13 +77,7 @@ try
 
 
 
- Tour Guide Information
 
- Tour Guide ID = Column_TourGuide_ID
- Tour Code = Column_TourGuide_TourCode
- Bus Number Assigned = Column_Assigned_Bus_Number
- Tour Guide's Last Name = ColumnTourGuide_LName
- Tour Guide's First Name = Column_TourGuide_FName
 
  Bus Information
 
