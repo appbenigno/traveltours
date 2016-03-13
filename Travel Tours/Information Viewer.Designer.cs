@@ -34,6 +34,7 @@
             this.button_Edit_Info = new System.Windows.Forms.Button();
             this.comboBox_Ordering = new System.Windows.Forms.ComboBox();
             this.label2 = new System.Windows.Forms.Label();
+            this.button_DELETE_INFORMATION = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.Elmanjovin_Database_Viewer)).BeginInit();
             this.SuspendLayout();
             // 
@@ -72,7 +73,7 @@
             // 
             // button_Edit_Info
             // 
-            this.button_Edit_Info.Location = new System.Drawing.Point(15, 127);
+            this.button_Edit_Info.Location = new System.Drawing.Point(12, 98);
             this.button_Edit_Info.Name = "button_Edit_Info";
             this.button_Edit_Info.Size = new System.Drawing.Size(159, 23);
             this.button_Edit_Info.TabIndex = 3;
@@ -96,7 +97,7 @@
             "By Bus number (DESCENDING)"});
             this.comboBox_Ordering.Location = new System.Drawing.Point(177, 37);
             this.comboBox_Ordering.Name = "comboBox_Ordering";
-            this.comboBox_Ordering.Size = new System.Drawing.Size(121, 21);
+            this.comboBox_Ordering.Size = new System.Drawing.Size(234, 21);
             this.comboBox_Ordering.TabIndex = 4;
             // 
             // label2
@@ -108,11 +109,21 @@
             this.label2.TabIndex = 5;
             this.label2.Text = "Order by:";
             // 
+            // button_DELETE_INFORMATION
+            // 
+            this.button_DELETE_INFORMATION.Location = new System.Drawing.Point(12, 127);
+            this.button_DELETE_INFORMATION.Name = "button_DELETE_INFORMATION";
+            this.button_DELETE_INFORMATION.Size = new System.Drawing.Size(159, 23);
+            this.button_DELETE_INFORMATION.TabIndex = 6;
+            this.button_DELETE_INFORMATION.Text = "Delete Information";
+            this.button_DELETE_INFORMATION.UseVisualStyleBackColor = true;
+            // 
             // Information_Viewer
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(987, 509);
+            this.Controls.Add(this.button_DELETE_INFORMATION);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.comboBox_Ordering);
             this.Controls.Add(this.button_Edit_Info);
@@ -138,5 +149,6 @@
         private System.Windows.Forms.Button button_Edit_Info;
         private System.Windows.Forms.ComboBox comboBox_Ordering;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Button button_DELETE_INFORMATION;
     }
 }

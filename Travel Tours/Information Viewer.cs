@@ -53,8 +53,9 @@ namespace Travel_Tours
 
         private void button_Edit_Info_Click(object sender, EventArgs e)
         {
-            Modify_Information Mod_Info_Window = new Modify_Information();
-            Mod_Info_Window.Show();
+            Edit_Information Edit_Info_Window = new Edit_Information();
+
+            Edit_Info_Window.Show();
         }
     }
 }

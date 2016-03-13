@@ -10,18 +10,11 @@ using System.Windows.Forms;
 
 namespace Travel_Tours
 {
-    // Added
-
-    public partial class Modify_Information : Form
+    public partial class Edit_Information : Form
     {
-        public Modify_Information()
+        public Edit_Information()
         {
             InitializeComponent();
-        }
-
-        private void Modify_Information_Load(object sender, EventArgs e)
-        {
-
         }
     }
 }

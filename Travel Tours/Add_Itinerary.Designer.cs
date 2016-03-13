@@ -36,7 +36,6 @@
             this.Column_ETD = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column_IT_Comments_Description = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.button_ADD_INFO = new System.Windows.Forms.Button();
-            this.button_EDIT_INFO = new System.Windows.Forms.Button();
             this.dataGridView_Tour_Guide_Information = new System.Windows.Forms.DataGridView();
             this.Column_TourGuide_ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column_TourGuide_TourCode = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -112,15 +111,6 @@
             this.button_ADD_INFO.TabIndex = 1;
             this.button_ADD_INFO.Text = "Add entered Information";
             this.button_ADD_INFO.UseVisualStyleBackColor = true;
-            // 
-            // button_EDIT_INFO
-            // 
-            this.button_EDIT_INFO.Location = new System.Drawing.Point(12, 41);
-            this.button_EDIT_INFO.Name = "button_EDIT_INFO";
-            this.button_EDIT_INFO.Size = new System.Drawing.Size(171, 23);
-            this.button_EDIT_INFO.TabIndex = 2;
-            this.button_EDIT_INFO.Text = "Edit Information";
-            this.button_EDIT_INFO.UseVisualStyleBackColor = true;
             // 
             // dataGridView_Tour_Guide_Information
             // 
@@ -252,7 +242,6 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.dataGridView_Tour_Guide_Information);
-            this.Controls.Add(this.button_EDIT_INFO);
             this.Controls.Add(this.button_ADD_INFO);
             this.Controls.Add(this.dataGridView_Tour_Itineraries);
             this.Name = "Add_Itinerary";
@@ -275,7 +264,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Column_ETD;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column_IT_Comments_Description;
         private System.Windows.Forms.Button button_ADD_INFO;
-        private System.Windows.Forms.Button button_EDIT_INFO;
         private System.Windows.Forms.DataGridView dataGridView_Tour_Guide_Information;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column_TourGuide_ID;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column_TourGuide_TourCode;
