@@ -59,6 +59,7 @@
             this.Controls.Add(this.button_MODIFY);
             this.Name = "Modify_Information";
             this.Text = "Modify_Information";
+            this.Load += new System.EventHandler(this.Modify_Information_Load);
             this.ResumeLayout(false);
 
         }
