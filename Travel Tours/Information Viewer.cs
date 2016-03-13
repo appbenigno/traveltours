@@ -47,6 +47,7 @@ namespace Travel_Tours
         {
             tour.display(comboBox_Information_Viewer, Elmanjovin_Database_Viewer);
             button_Edit_Info.Enabled = Tours.isFacilitator();
+            button_DELETE_INFORMATION.Enabled = Tours.isFacilitator();
 
                 //btnManageUsers.Enabled = Tours.isFacilitator();
         }
