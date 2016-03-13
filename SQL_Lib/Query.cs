@@ -84,6 +84,30 @@ namespace SQL_Lib
             throw new NotImplementedException();
         }
 
+        public void ADD_ITINERARY(DataGridView ITINERARY_DATAGRID)
+        {
+            /* Tour Itinerary Code = Column_IT_CODE 
+             * Tour Code = Column_TourCode
+                Itinerary Name = Column_IT_Name
+                Expected Time of Arrival = Column_ETA
+                Expected Time of Departure = Column_ETD
+                Itinerary Descprtion = Column_IT_Comments_Description
+             */
+
+            SqlConnection ITINERARY_CONNECTION = new SqlConnection(ConnectString());
+            SqlCommand ITINERARY_COMMAND = new SqlCommand();
+
+            ITINERARY_COMMAND.Connection = ITINERARY_CONNECTION;
+
+            ITINERARY_CONNECTION.Open();
+
+            for (int i = 0; i < ITINERARY_DATAGRID.Rows.Count; i++ )
+            {
+                ITINERARY_COMMAND.CommandText = @"INSERT INTO ITINERARY_INFORMATION VALUES (" + ITINERARY_DATAGRID.Rows[i].Cells["Column_IT_CODE"].Value + ", " + ITINERARY_DATAGRID.Rows[i].Cells["Column_TourCode"].Value + ", "+ ITINERARY_DATAGRID.Rows[i].Cells["Column_TourCode"].Value +", "+ ITINERARY_DATAGRID.Rows[i].Cells["Column_IT_Name"]+", " + ITINERARY_DATAGRID.Rows[i].Cells["Column_ETA"].Value +", " + ITINERARY_DATAGRID.Rows[i].Cells["Column_ETD"].Value + ", " + ITINERARY_DATAGRID.Rows[i].Cells.["Column_IT_Comments_Description"].Value +")";
+                ITINERARY_COMMAND.ExecuteNonQuery();
+            }
+        }
+
         public int Increment_Counter(string INFORMATION_CODE, string DATABASE_TABLE_NAME)
         {
             // SqlConnection ADD_CONNECTION = new SqlConnection(ConnectString());

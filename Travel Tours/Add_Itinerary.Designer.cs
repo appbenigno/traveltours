@@ -53,6 +53,9 @@
             this.ColumnBusPaxTotal = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ColumnBusAssignedTourGuideLName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ColumnBusAssignedTourGuideFName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.button_TEST_IT = new System.Windows.Forms.Button();
+            this.button_TEST_TOUR_GUIDE = new System.Windows.Forms.Button();
+            this.button_TEST_BUS = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView_Tour_Itineraries)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView_Tour_Guide_Information)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView_Bus_Information)).BeginInit();
@@ -60,6 +63,7 @@
             // 
             // dataGridView_Tour_Itineraries
             // 
+            this.dataGridView_Tour_Itineraries.AllowUserToDeleteRows = false;
             this.dataGridView_Tour_Itineraries.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView_Tour_Itineraries.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Column_IT_CODE,
@@ -72,6 +76,9 @@
             this.dataGridView_Tour_Itineraries.Name = "dataGridView_Tour_Itineraries";
             this.dataGridView_Tour_Itineraries.Size = new System.Drawing.Size(734, 155);
             this.dataGridView_Tour_Itineraries.TabIndex = 0;
+            this.dataGridView_Tour_Itineraries.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView_Tour_Itineraries_CellContentClick);
+            this.dataGridView_Tour_Itineraries.DefaultValuesNeeded += new System.Windows.Forms.DataGridViewRowEventHandler(this.dataGridView_Tour_Itineraries_DefaultValuesNeeded);
+            this.dataGridView_Tour_Itineraries.RowsAdded += new System.Windows.Forms.DataGridViewRowsAddedEventHandler(this.dataGridView_Tour_Itineraries_RowsAdded);
             // 
             // Column_IT_CODE
             // 
@@ -115,6 +122,7 @@
             // 
             // dataGridView_Tour_Guide_Information
             // 
+            this.dataGridView_Tour_Guide_Information.AllowUserToDeleteRows = false;
             this.dataGridView_Tour_Guide_Information.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView_Tour_Guide_Information.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Column_TourGuide_ID,
@@ -126,6 +134,8 @@
             this.dataGridView_Tour_Guide_Information.Name = "dataGridView_Tour_Guide_Information";
             this.dataGridView_Tour_Guide_Information.Size = new System.Drawing.Size(734, 128);
             this.dataGridView_Tour_Guide_Information.TabIndex = 3;
+            this.dataGridView_Tour_Guide_Information.DefaultValuesNeeded += new System.Windows.Forms.DataGridViewRowEventHandler(this.dataGridView_Tour_Guide_Information_DefaultValuesNeeded);
+            this.dataGridView_Tour_Guide_Information.RowsAdded += new System.Windows.Forms.DataGridViewRowsAddedEventHandler(this.dataGridView_Tour_Guide_Information_RowsAdded);
             // 
             // Column_TourGuide_ID
             // 
@@ -184,6 +194,7 @@
             // 
             // dataGridView_Bus_Information
             // 
+            this.dataGridView_Bus_Information.AllowUserToDeleteRows = false;
             this.dataGridView_Bus_Information.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView_Bus_Information.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Column_BusInfoID,
@@ -197,6 +208,9 @@
             this.dataGridView_Bus_Information.Name = "dataGridView_Bus_Information";
             this.dataGridView_Bus_Information.Size = new System.Drawing.Size(734, 150);
             this.dataGridView_Bus_Information.TabIndex = 7;
+            this.dataGridView_Bus_Information.DataBindingComplete += new System.Windows.Forms.DataGridViewBindingCompleteEventHandler(this.dataGridView_Bus_Information_DataBindingComplete);
+            this.dataGridView_Bus_Information.DefaultValuesNeeded += new System.Windows.Forms.DataGridViewRowEventHandler(this.dataGridView_Bus_Information_DefaultValuesNeeded);
+            this.dataGridView_Bus_Information.RowsAdded += new System.Windows.Forms.DataGridViewRowsAddedEventHandler(this.dataGridView_Bus_Information_RowsAdded);
             // 
             // Column_BusInfoID
             // 
@@ -233,11 +247,42 @@
             this.ColumnBusAssignedTourGuideFName.HeaderText = "Tour Guide\'s First Name";
             this.ColumnBusAssignedTourGuideFName.Name = "ColumnBusAssignedTourGuideFName";
             // 
+            // button_TEST_IT
+            // 
+            this.button_TEST_IT.Location = new System.Drawing.Point(239, 43);
+            this.button_TEST_IT.Name = "button_TEST_IT";
+            this.button_TEST_IT.Size = new System.Drawing.Size(108, 23);
+            this.button_TEST_IT.TabIndex = 8;
+            this.button_TEST_IT.Text = "Test Tour IT";
+            this.button_TEST_IT.UseVisualStyleBackColor = true;
+            this.button_TEST_IT.Click += new System.EventHandler(this.button_TEST_IT_Click);
+            // 
+            // button_TEST_TOUR_GUIDE
+            // 
+            this.button_TEST_TOUR_GUIDE.Location = new System.Drawing.Point(353, 43);
+            this.button_TEST_TOUR_GUIDE.Name = "button_TEST_TOUR_GUIDE";
+            this.button_TEST_TOUR_GUIDE.Size = new System.Drawing.Size(108, 23);
+            this.button_TEST_TOUR_GUIDE.TabIndex = 9;
+            this.button_TEST_TOUR_GUIDE.Text = "Test Tour Guide";
+            this.button_TEST_TOUR_GUIDE.UseVisualStyleBackColor = true;
+            // 
+            // button_TEST_BUS
+            // 
+            this.button_TEST_BUS.Location = new System.Drawing.Point(467, 43);
+            this.button_TEST_BUS.Name = "button_TEST_BUS";
+            this.button_TEST_BUS.Size = new System.Drawing.Size(108, 23);
+            this.button_TEST_BUS.TabIndex = 10;
+            this.button_TEST_BUS.Text = "Test Bus Info";
+            this.button_TEST_BUS.UseVisualStyleBackColor = true;
+            // 
             // Add_Itinerary
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(758, 693);
+            this.Controls.Add(this.button_TEST_BUS);
+            this.Controls.Add(this.button_TEST_TOUR_GUIDE);
+            this.Controls.Add(this.button_TEST_IT);
             this.Controls.Add(this.dataGridView_Bus_Information);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
@@ -283,5 +328,8 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn ColumnBusPaxTotal;
         private System.Windows.Forms.DataGridViewTextBoxColumn ColumnBusAssignedTourGuideLName;
         private System.Windows.Forms.DataGridViewTextBoxColumn ColumnBusAssignedTourGuideFName;
+        private System.Windows.Forms.Button button_TEST_IT;
+        private System.Windows.Forms.Button button_TEST_TOUR_GUIDE;
+        private System.Windows.Forms.Button button_TEST_BUS;
     }
 }
