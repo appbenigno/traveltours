@@ -64,6 +64,12 @@
     <Compile Include="ControlPanel.Designer.cs">
       <DependentUpon>ControlPanel.cs</DependentUpon>
     </Compile>
+    <Compile Include="Edit_Information.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Edit_Information.Designer.cs">
+      <DependentUpon>Edit_Information.cs</DependentUpon>
+    </Compile>
     <Compile Include="Information Viewer.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -95,6 +101,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="ControlPanel.resx">
       <DependentUpon>ControlPanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Edit_Information.resx">
+      <DependentUpon>Edit_Information.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Information Viewer.resx">
       <DependentUpon>Information Viewer.cs</DependentUpon>
