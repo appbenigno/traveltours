@@ -39,6 +39,7 @@
             // 
             // Elmanjovin_Database_Viewer
             // 
+            this.Elmanjovin_Database_Viewer.AllowUserToAddRows = false;
             this.Elmanjovin_Database_Viewer.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.Elmanjovin_Database_Viewer.Location = new System.Drawing.Point(12, 156);
             this.Elmanjovin_Database_Viewer.Name = "Elmanjovin_Database_Viewer";
@@ -77,6 +78,7 @@
             this.button_Edit_Info.TabIndex = 3;
             this.button_Edit_Info.Text = "Edit Information";
             this.button_Edit_Info.UseVisualStyleBackColor = true;
+            this.button_Edit_Info.Click += new System.EventHandler(this.button_Edit_Info_Click);
             // 
             // comboBox_Ordering
             // 

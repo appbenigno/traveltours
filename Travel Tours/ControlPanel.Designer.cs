@@ -128,6 +128,7 @@
             this.Text = "Control Panel";
             this.Activated += new System.EventHandler(this.frmControlPanel_Activated);
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.frmControlPanel_FormClosing);
+            this.Load += new System.EventHandler(this.frmControlPanel_Load);
             this.statusStrip1.ResumeLayout(false);
             this.statusStrip1.PerformLayout();
             this.ResumeLayout(false);

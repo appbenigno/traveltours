@@ -54,6 +54,8 @@ namespace SQL_Lib
                 ADD_COMMAND.Parameters.AddWithValue("@TOTAL_NUMBER_OF_PAX", Number_Of_Passengers);
                 ADD_COMMAND.Parameters.AddWithValue("@TOTAL_NUMBER_OF_BUSES", Number_Of_Buses);
                 ADD_COMMAND.Parameters.AddWithValue("@TOUR_FACILITATORS", Number_Of_Tour_Guides);
+                ADD_CONNECTION.Open();
+                ADD_COMMAND.ExecuteNonQuery();
             }
 
             catch(Exception ADD_EXCEPTION)

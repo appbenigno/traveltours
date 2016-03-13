@@ -46,6 +46,14 @@ namespace Travel_Tours
         private void Information_Viewer_Activated(object sender, EventArgs e)
         {
             tour.display(comboBox_Information_Viewer, Elmanjovin_Database_Viewer);
+            button_Edit_Info.Enabled = Tours.isFacilitator();
+
+                //btnManageUsers.Enabled = Tours.isFacilitator();
+        }
+
+        private void button_Edit_Info_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

@@ -79,12 +79,6 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Tour Information Viewer - Tour Guide.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Tour Information Viewer - Tour Guide.Designer.cs">
-      <DependentUpon>Tour Information Viewer - Tour Guide.cs</DependentUpon>
-    </Compile>
     <Compile Include="Tour Information.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -117,9 +111,6 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="Tour Information Viewer - Tour Guide.resx">
-      <DependentUpon>Tour Information Viewer - Tour Guide.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Tour Information.resx">
       <DependentUpon>Tour Information.cs</DependentUpon>
     </EmbeddedResource>

@@ -39,6 +39,7 @@ namespace Travel_Tours
             statusLabelPosition.Text = Credentials.Position;
 
             btnManageUsers.Enabled = Tours.isFacilitator();
+            buttonADD_TOUR.Enabled = Tours.isFacilitator();
         }
 
         private void btnViewTours_Click(object sender, EventArgs e)
@@ -51,6 +52,11 @@ namespace Travel_Tours
             Tour_Information Tour_Information_Window = new Tour_Information();
 
             Tour_Information_Window.Show();
+        }
+
+        private void frmControlPanel_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }
