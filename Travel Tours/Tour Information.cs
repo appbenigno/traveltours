@@ -7,11 +7,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using SQL_Lib;
 
 namespace Travel_Tours
 {
     public partial class Tour_Information : Form
     {
+        Query qr = new Query(new Connections(".\\SQLEXPRESS", "ELMANJOVIN_TRAVEL_AND_TOURS"));
         public Tour_Information()
         {
             InitializeComponent();
@@ -45,7 +47,8 @@ namespace Travel_Tours
 
             try
             {
-                SQL_Lib.Query AddTour = new SQL_Lib.Query();
+
+                Query AddTour = new Query(qr.Connection);
                 AddTour.Add(1002, textBox_CompanyInfo.Text, dateTimePicker_START.Value.Date, dateTimePicker_END.Value.Date, int.Parse(textBox_PAX.Text), int.Parse(textBox_Num_Tour_Guides.Text), int.Parse(textBox_Num_Buses.Text));
                 MessageBox.Show("Tour added! you can now put in itineraries, click the 'Itineraries' button to start.");
                 button_ADD_TOUR.Enabled = false;

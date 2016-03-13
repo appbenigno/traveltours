@@ -117,6 +117,7 @@
             this.button_DELETE_INFORMATION.TabIndex = 6;
             this.button_DELETE_INFORMATION.Text = "Delete Information";
             this.button_DELETE_INFORMATION.UseVisualStyleBackColor = true;
+            this.button_DELETE_INFORMATION.Click += new System.EventHandler(this.button_DELETE_INFORMATION_Click);
             // 
             // Information_Viewer
             // 
