@@ -111,6 +111,7 @@
             this.button_ADD_INFO.TabIndex = 1;
             this.button_ADD_INFO.Text = "Add entered Information";
             this.button_ADD_INFO.UseVisualStyleBackColor = true;
+            this.button_ADD_INFO.Click += new System.EventHandler(this.button_ADD_INFO_Click);
             // 
             // dataGridView_Tour_Guide_Information
             // 
@@ -246,6 +247,7 @@
             this.Controls.Add(this.dataGridView_Tour_Itineraries);
             this.Name = "Add_Itinerary";
             this.Text = "Add Itineraries";
+            this.Load += new System.EventHandler(this.Add_Itinerary_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView_Tour_Itineraries)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView_Tour_Guide_Information)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView_Bus_Information)).EndInit();

@@ -54,6 +54,9 @@ namespace Travel_Tours
 
         private void button_Edit_Info_Click(object sender, EventArgs e)
         {
+            Edit_Information Edit_Information_Window = new Edit_Information();
+
+            Edit_Information_Window.Show();
         }
 
         private void button_DELETE_INFORMATION_Click(object sender, EventArgs e)

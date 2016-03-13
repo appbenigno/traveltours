@@ -84,6 +84,60 @@ namespace SQL_Lib
             throw new NotImplementedException();
         }
 
+        public int Increment_Counter(string INFORMATION_CODE, string DATABASE_TABLE_NAME)
+        {
+            // SqlConnection ADD_CONNECTION = new SqlConnection(ConnectString());
+            //new Connections(".\\SQLEXPRESS", "ELMANJOVIN_TRAVEL_AND_TOURS")
+
+            try
+            {
+                SqlConnection INFORMATION_CODE_INCREMENT_CONNECTION = new SqlConnection(ConnectString());
+                SqlCommand INCREMENT = new SqlCommand("SELECT MAX("+INFORMATION_CODE+") FROM "+DATABASE_TABLE_NAME);
+
+                INCREMENT.CommandType = CommandType.Text;
+                INCREMENT.Connection = INFORMATION_CODE_INCREMENT_CONNECTION;
+
+                INFORMATION_CODE_INCREMENT_CONNECTION.Open();
+                int Information_Code = (int)INCREMENT.ExecuteScalar() + 1;
+
+                return Information_Code;
+            }
+            catch(Exception COUNTER_EXCEPTION)
+            {
+                MessageBox.Show("Error: " + COUNTER_EXCEPTION.Message.ToString());
+
+                return 0;
+            }
+            
+        }
+
+        public int STATIC_CODE_GETTER(string INFORMATION_CODE, string DATABASE_TABLE_NAME)
+        {
+            // SqlConnection ADD_CONNECTION = new SqlConnection(ConnectString());
+            //new Connections(".\\SQLEXPRESS", "ELMANJOVIN_TRAVEL_AND_TOURS")
+
+            try
+            {
+                SqlConnection INFORMATION_CODE_STATIC_CONNECTION = new SqlConnection(ConnectString());
+                SqlCommand STATIC = new SqlCommand("SELECT MAX(" + INFORMATION_CODE + ") FROM "+DATABASE_TABLE_NAME);
+
+                STATIC.CommandType = CommandType.Text;
+                STATIC.Connection = INFORMATION_CODE_STATIC_CONNECTION;
+
+                INFORMATION_CODE_STATIC_CONNECTION.Open();
+                int TourCode = (int)STATIC.ExecuteScalar();
+
+                return TourCode;
+            }
+            catch (Exception COUNTER_EXCEPTION)
+            {
+                MessageBox.Show("Error: " + COUNTER_EXCEPTION.Message.ToString());
+
+                return 0;
+            }
+
+        }
+
         public void Delete(int Key_Identifier)
         {
             throw new NotImplementedException();

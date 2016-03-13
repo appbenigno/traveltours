@@ -21,8 +21,9 @@ namespace Travel_Tours
 
         private void Tour_Information_Load(object sender, EventArgs e)
         {
+            Query Increment = new Query(new Connections(".\\SQLEXPRESS", "ELMANJOVIN_TRAVEL_AND_TOURS"));
             Itineraries_Button.Enabled = false;
- 
+            texBox_TourCode.Text = Increment.Increment_Counter("TOUR_CODE", "TOUR_INFORMATION").ToString();
         }
 
         private void richTextBox1_TextChanged(object sender, EventArgs e)
@@ -49,7 +50,7 @@ namespace Travel_Tours
             {
 
                 Query AddTour = new Query(qr.Connection);
-                AddTour.Add(1002, textBox_CompanyInfo.Text, dateTimePicker_START.Value.Date, dateTimePicker_END.Value.Date, int.Parse(textBox_PAX.Text), int.Parse(textBox_Num_Tour_Guides.Text), int.Parse(textBox_Num_Buses.Text));
+                AddTour.Add(int.Parse(texBox_TourCode.Text), textBox_CompanyInfo.Text, dateTimePicker_START.Value.Date, dateTimePicker_END.Value.Date, int.Parse(textBox_PAX.Text), int.Parse(textBox_Num_Tour_Guides.Text), int.Parse(textBox_Num_Buses.Text));
                 MessageBox.Show("Tour added! you can now put in itineraries, click the 'Itineraries' button to start.");
                 button_ADD_TOUR.Enabled = false;
                 Itineraries_Button.Enabled = true;

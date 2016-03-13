@@ -302,7 +302,7 @@
             this.ClientSize = new System.Drawing.Size(624, 505);
             this.Controls.Add(this.tabControl_TourInfo);
             this.Name = "Edit_Information";
-            this.Text = "Edit_Information";
+            this.Text = "Edit Information";
             this.tabControl_TourInfo.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
             this.tabPage1.PerformLayout();
