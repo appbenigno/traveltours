@@ -30,6 +30,7 @@ namespace SQL_Lib
             }
             catch (Exception errProcCreate)
             {
+                throw new NotImplementedException();
                 //MessageBox.Show(errProcCreate.Message, "", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             finally

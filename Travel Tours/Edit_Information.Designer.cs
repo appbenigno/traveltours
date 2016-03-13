@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.tabControl_TourInfo = new System.Windows.Forms.TabControl();
-            this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.tabTourInfo = new System.Windows.Forms.TabPage();
             this.button_EDIT_INFO = new System.Windows.Forms.Button();
             this.textBox_EDIT_Name_Descripotion = new System.Windows.Forms.TextBox();
             this.textBox_EDIT_BUSES = new System.Windows.Forms.TextBox();
@@ -43,59 +43,60 @@
             this.dateTimePicker_EDIT = new System.Windows.Forms.DateTimePicker();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.tabPage2 = new System.Windows.Forms.TabPage();
-            this.button1 = new System.Windows.Forms.Button();
+            this.tabTourItinerary = new System.Windows.Forms.TabPage();
+            this.button_EDIT_ITINERARY = new System.Windows.Forms.Button();
             this.dataGridView_EDIT_IT_INFO = new System.Windows.Forms.DataGridView();
-            this.tabPage3 = new System.Windows.Forms.TabPage();
+            this.tabTourGuides = new System.Windows.Forms.TabPage();
             this.button_EDIT_TOUR_GUIDES = new System.Windows.Forms.Button();
             this.dataGridView_EDIT_TOUR_GUIDES = new System.Windows.Forms.DataGridView();
-            this.tabPage4 = new System.Windows.Forms.TabPage();
+            this.tabBusInfo = new System.Windows.Forms.TabPage();
             this.button_EDIT_BUS_INFORMATION = new System.Windows.Forms.Button();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.dataGridView_EDIT_BUS_INFO = new System.Windows.Forms.DataGridView();
             this.tabControl_TourInfo.SuspendLayout();
-            this.tabPage1.SuspendLayout();
-            this.tabPage2.SuspendLayout();
+            this.tabTourInfo.SuspendLayout();
+            this.tabTourItinerary.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView_EDIT_IT_INFO)).BeginInit();
-            this.tabPage3.SuspendLayout();
+            this.tabTourGuides.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView_EDIT_TOUR_GUIDES)).BeginInit();
-            this.tabPage4.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.tabBusInfo.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView_EDIT_BUS_INFO)).BeginInit();
             this.SuspendLayout();
             // 
             // tabControl_TourInfo
             // 
-            this.tabControl_TourInfo.Controls.Add(this.tabPage1);
-            this.tabControl_TourInfo.Controls.Add(this.tabPage2);
-            this.tabControl_TourInfo.Controls.Add(this.tabPage3);
-            this.tabControl_TourInfo.Controls.Add(this.tabPage4);
+            this.tabControl_TourInfo.Controls.Add(this.tabTourInfo);
+            this.tabControl_TourInfo.Controls.Add(this.tabTourItinerary);
+            this.tabControl_TourInfo.Controls.Add(this.tabTourGuides);
+            this.tabControl_TourInfo.Controls.Add(this.tabBusInfo);
             this.tabControl_TourInfo.Location = new System.Drawing.Point(12, 12);
             this.tabControl_TourInfo.Name = "tabControl_TourInfo";
             this.tabControl_TourInfo.SelectedIndex = 0;
             this.tabControl_TourInfo.Size = new System.Drawing.Size(600, 481);
             this.tabControl_TourInfo.TabIndex = 0;
+            this.tabControl_TourInfo.Click += new System.EventHandler(this.tabControl_TourInfo_Click);
             // 
-            // tabPage1
+            // tabTourInfo
             // 
-            this.tabPage1.Controls.Add(this.button_EDIT_INFO);
-            this.tabPage1.Controls.Add(this.textBox_EDIT_Name_Descripotion);
-            this.tabPage1.Controls.Add(this.textBox_EDIT_BUSES);
-            this.tabPage1.Controls.Add(this.textBox_EDIT_TOUR_GUIDES);
-            this.tabPage1.Controls.Add(this.textBox_EDIT_PAX);
-            this.tabPage1.Controls.Add(this.label6);
-            this.tabPage1.Controls.Add(this.label5);
-            this.tabPage1.Controls.Add(this.label4);
-            this.tabPage1.Controls.Add(this.dateTimePicker_END_EDIT);
-            this.tabPage1.Controls.Add(this.label3);
-            this.tabPage1.Controls.Add(this.dateTimePicker_EDIT);
-            this.tabPage1.Controls.Add(this.label2);
-            this.tabPage1.Controls.Add(this.label1);
-            this.tabPage1.Location = new System.Drawing.Point(4, 22);
-            this.tabPage1.Name = "tabPage1";
-            this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(592, 455);
-            this.tabPage1.TabIndex = 0;
-            this.tabPage1.Text = "Tour Information";
-            this.tabPage1.UseVisualStyleBackColor = true;
+            this.tabTourInfo.Controls.Add(this.button_EDIT_INFO);
+            this.tabTourInfo.Controls.Add(this.textBox_EDIT_Name_Descripotion);
+            this.tabTourInfo.Controls.Add(this.textBox_EDIT_BUSES);
+            this.tabTourInfo.Controls.Add(this.textBox_EDIT_TOUR_GUIDES);
+            this.tabTourInfo.Controls.Add(this.textBox_EDIT_PAX);
+            this.tabTourInfo.Controls.Add(this.label6);
+            this.tabTourInfo.Controls.Add(this.label5);
+            this.tabTourInfo.Controls.Add(this.label4);
+            this.tabTourInfo.Controls.Add(this.dateTimePicker_END_EDIT);
+            this.tabTourInfo.Controls.Add(this.label3);
+            this.tabTourInfo.Controls.Add(this.dateTimePicker_EDIT);
+            this.tabTourInfo.Controls.Add(this.label2);
+            this.tabTourInfo.Controls.Add(this.label1);
+            this.tabTourInfo.Location = new System.Drawing.Point(4, 22);
+            this.tabTourInfo.Name = "tabTourInfo";
+            this.tabTourInfo.Padding = new System.Windows.Forms.Padding(3);
+            this.tabTourInfo.Size = new System.Drawing.Size(592, 455);
+            this.tabTourInfo.TabIndex = 0;
+            this.tabTourInfo.Text = "Tour Information";
+            this.tabTourInfo.UseVisualStyleBackColor = true;
             // 
             // button_EDIT_INFO
             // 
@@ -105,6 +106,7 @@
             this.button_EDIT_INFO.TabIndex = 12;
             this.button_EDIT_INFO.Text = "EDIT INFORMATION";
             this.button_EDIT_INFO.UseVisualStyleBackColor = true;
+            this.button_EDIT_INFO.Click += new System.EventHandler(this.button_EDIT_INFO_Click);
             // 
             // textBox_EDIT_Name_Descripotion
             // 
@@ -202,26 +204,28 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "Name of Company/Personnel/School etc: ";
             // 
-            // tabPage2
+            // tabTourItinerary
             // 
-            this.tabPage2.Controls.Add(this.button1);
-            this.tabPage2.Controls.Add(this.dataGridView_EDIT_IT_INFO);
-            this.tabPage2.Location = new System.Drawing.Point(4, 22);
-            this.tabPage2.Name = "tabPage2";
-            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(592, 455);
-            this.tabPage2.TabIndex = 1;
-            this.tabPage2.Text = "Tour Itineraries";
-            this.tabPage2.UseVisualStyleBackColor = true;
+            this.tabTourItinerary.Controls.Add(this.button_EDIT_ITINERARY);
+            this.tabTourItinerary.Controls.Add(this.dataGridView_EDIT_IT_INFO);
+            this.tabTourItinerary.Location = new System.Drawing.Point(4, 22);
+            this.tabTourItinerary.Name = "tabTourItinerary";
+            this.tabTourItinerary.Padding = new System.Windows.Forms.Padding(3);
+            this.tabTourItinerary.Size = new System.Drawing.Size(592, 455);
+            this.tabTourItinerary.TabIndex = 1;
+            this.tabTourItinerary.Text = "Tour Itineraries";
+            this.tabTourItinerary.UseVisualStyleBackColor = true;
+            this.tabTourItinerary.Click += new System.EventHandler(this.tabTourItinerary_Click);
             // 
-            // button1
+            // button_EDIT_ITINERARY
             // 
-            this.button1.Location = new System.Drawing.Point(6, 426);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(580, 23);
-            this.button1.TabIndex = 1;
-            this.button1.Text = "EDIT ITINERARY INFORMATION";
-            this.button1.UseVisualStyleBackColor = true;
+            this.button_EDIT_ITINERARY.Location = new System.Drawing.Point(6, 426);
+            this.button_EDIT_ITINERARY.Name = "button_EDIT_ITINERARY";
+            this.button_EDIT_ITINERARY.Size = new System.Drawing.Size(580, 23);
+            this.button_EDIT_ITINERARY.TabIndex = 1;
+            this.button_EDIT_ITINERARY.Text = "EDIT ITINERARY INFORMATION";
+            this.button_EDIT_ITINERARY.UseVisualStyleBackColor = true;
+            this.button_EDIT_ITINERARY.Click += new System.EventHandler(this.button_EDIT_ITINERARY_Click);
             // 
             // dataGridView_EDIT_IT_INFO
             // 
@@ -233,17 +237,18 @@
             this.dataGridView_EDIT_IT_INFO.Size = new System.Drawing.Size(580, 414);
             this.dataGridView_EDIT_IT_INFO.TabIndex = 0;
             // 
-            // tabPage3
+            // tabTourGuides
             // 
-            this.tabPage3.Controls.Add(this.button_EDIT_TOUR_GUIDES);
-            this.tabPage3.Controls.Add(this.dataGridView_EDIT_TOUR_GUIDES);
-            this.tabPage3.Location = new System.Drawing.Point(4, 22);
-            this.tabPage3.Name = "tabPage3";
-            this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage3.Size = new System.Drawing.Size(592, 455);
-            this.tabPage3.TabIndex = 2;
-            this.tabPage3.Text = "Tour Guides";
-            this.tabPage3.UseVisualStyleBackColor = true;
+            this.tabTourGuides.Controls.Add(this.button_EDIT_TOUR_GUIDES);
+            this.tabTourGuides.Controls.Add(this.dataGridView_EDIT_TOUR_GUIDES);
+            this.tabTourGuides.Location = new System.Drawing.Point(4, 22);
+            this.tabTourGuides.Name = "tabTourGuides";
+            this.tabTourGuides.Padding = new System.Windows.Forms.Padding(3);
+            this.tabTourGuides.Size = new System.Drawing.Size(592, 455);
+            this.tabTourGuides.TabIndex = 2;
+            this.tabTourGuides.Text = "Tour Guides";
+            this.tabTourGuides.UseVisualStyleBackColor = true;
+            this.tabTourGuides.Click += new System.EventHandler(this.tabTourGuides_Click);
             // 
             // button_EDIT_TOUR_GUIDES
             // 
@@ -253,6 +258,7 @@
             this.button_EDIT_TOUR_GUIDES.TabIndex = 1;
             this.button_EDIT_TOUR_GUIDES.Text = "EDIT TOUR GUIDE INFORMATION";
             this.button_EDIT_TOUR_GUIDES.UseVisualStyleBackColor = true;
+            this.button_EDIT_TOUR_GUIDES.Click += new System.EventHandler(this.button_EDIT_TOUR_GUIDES_Click);
             // 
             // dataGridView_EDIT_TOUR_GUIDES
             // 
@@ -264,17 +270,18 @@
             this.dataGridView_EDIT_TOUR_GUIDES.Size = new System.Drawing.Size(580, 414);
             this.dataGridView_EDIT_TOUR_GUIDES.TabIndex = 0;
             // 
-            // tabPage4
+            // tabBusInfo
             // 
-            this.tabPage4.Controls.Add(this.button_EDIT_BUS_INFORMATION);
-            this.tabPage4.Controls.Add(this.dataGridView1);
-            this.tabPage4.Location = new System.Drawing.Point(4, 22);
-            this.tabPage4.Name = "tabPage4";
-            this.tabPage4.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage4.Size = new System.Drawing.Size(592, 455);
-            this.tabPage4.TabIndex = 3;
-            this.tabPage4.Text = "Bus Information";
-            this.tabPage4.UseVisualStyleBackColor = true;
+            this.tabBusInfo.Controls.Add(this.button_EDIT_BUS_INFORMATION);
+            this.tabBusInfo.Controls.Add(this.dataGridView_EDIT_BUS_INFO);
+            this.tabBusInfo.Location = new System.Drawing.Point(4, 22);
+            this.tabBusInfo.Name = "tabBusInfo";
+            this.tabBusInfo.Padding = new System.Windows.Forms.Padding(3);
+            this.tabBusInfo.Size = new System.Drawing.Size(592, 455);
+            this.tabBusInfo.TabIndex = 3;
+            this.tabBusInfo.Text = "Bus Information";
+            this.tabBusInfo.UseVisualStyleBackColor = true;
+            this.tabBusInfo.Click += new System.EventHandler(this.tabBusInfo_Click);
             // 
             // button_EDIT_BUS_INFORMATION
             // 
@@ -284,16 +291,17 @@
             this.button_EDIT_BUS_INFORMATION.TabIndex = 1;
             this.button_EDIT_BUS_INFORMATION.Text = "EDIT BUS INFORMATION";
             this.button_EDIT_BUS_INFORMATION.UseVisualStyleBackColor = true;
+            this.button_EDIT_BUS_INFORMATION.Click += new System.EventHandler(this.button_EDIT_BUS_INFORMATION_Click);
             // 
-            // dataGridView1
+            // dataGridView_EDIT_BUS_INFO
             // 
-            this.dataGridView1.AllowUserToAddRows = false;
-            this.dataGridView1.AllowUserToDeleteRows = false;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(6, 6);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(580, 414);
-            this.dataGridView1.TabIndex = 0;
+            this.dataGridView_EDIT_BUS_INFO.AllowUserToAddRows = false;
+            this.dataGridView_EDIT_BUS_INFO.AllowUserToDeleteRows = false;
+            this.dataGridView_EDIT_BUS_INFO.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView_EDIT_BUS_INFO.Location = new System.Drawing.Point(6, 6);
+            this.dataGridView_EDIT_BUS_INFO.Name = "dataGridView_EDIT_BUS_INFO";
+            this.dataGridView_EDIT_BUS_INFO.Size = new System.Drawing.Size(580, 414);
+            this.dataGridView_EDIT_BUS_INFO.TabIndex = 0;
             // 
             // Edit_Information
             // 
@@ -301,17 +309,20 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(624, 505);
             this.Controls.Add(this.tabControl_TourInfo);
+            this.MaximizeBox = false;
             this.Name = "Edit_Information";
             this.Text = "Edit Information";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Edit_Information_FormClosing);
+            this.Load += new System.EventHandler(this.Edit_Information_Load);
             this.tabControl_TourInfo.ResumeLayout(false);
-            this.tabPage1.ResumeLayout(false);
-            this.tabPage1.PerformLayout();
-            this.tabPage2.ResumeLayout(false);
+            this.tabTourInfo.ResumeLayout(false);
+            this.tabTourInfo.PerformLayout();
+            this.tabTourItinerary.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView_EDIT_IT_INFO)).EndInit();
-            this.tabPage3.ResumeLayout(false);
+            this.tabTourGuides.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView_EDIT_TOUR_GUIDES)).EndInit();
-            this.tabPage4.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            this.tabBusInfo.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView_EDIT_BUS_INFO)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -319,10 +330,10 @@
         #endregion
 
         private System.Windows.Forms.TabControl tabControl_TourInfo;
-        private System.Windows.Forms.TabPage tabPage2;
-        private System.Windows.Forms.TabPage tabPage3;
-        private System.Windows.Forms.TabPage tabPage4;
-        private System.Windows.Forms.TabPage tabPage1;
+        private System.Windows.Forms.TabPage tabTourItinerary;
+        private System.Windows.Forms.TabPage tabTourGuides;
+        private System.Windows.Forms.TabPage tabBusInfo;
+        private System.Windows.Forms.TabPage tabTourInfo;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.DateTimePicker dateTimePicker_EDIT;
@@ -336,11 +347,11 @@
         private System.Windows.Forms.TextBox textBox_EDIT_TOUR_GUIDES;
         private System.Windows.Forms.TextBox textBox_EDIT_PAX;
         private System.Windows.Forms.Button button_EDIT_INFO;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button button_EDIT_ITINERARY;
         private System.Windows.Forms.DataGridView dataGridView_EDIT_IT_INFO;
         private System.Windows.Forms.Button button_EDIT_TOUR_GUIDES;
         private System.Windows.Forms.DataGridView dataGridView_EDIT_TOUR_GUIDES;
         private System.Windows.Forms.Button button_EDIT_BUS_INFORMATION;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView dataGridView_EDIT_BUS_INFO;
     }
 }

@@ -37,5 +37,33 @@ namespace Travel_Tours
         /// <param name="targetGridView"></param>
         /// 
         void viewTourGuides(DataGridView targetGridView);
+
+        /// <summary>
+        /// Modify Tour Information
+        /// </summary>
+        /// <param name="targetGridView"></param>
+        /// 
+        void modifyTourInfo(DataGridView targetGridView);
+
+        /// <summary>
+        /// Modify Itinerary Info
+        /// </summary>
+        /// <param name="targetGridView"></param>
+        /// 
+        void modifyItineraryInfo(DataGridView targetGridView);
+
+        /// <summary>
+        /// Modify Bus Information
+        /// </summary>
+        /// <param name="targetGridView"></param>
+        /// 
+        void modifyBusInfo(DataGridView targetGridView);
+
+        /// <summary>
+        /// Modify Tour Guides
+        /// </summary>
+        /// <param name="targetGridView"></param>
+        /// 
+        void modifyTourGuides(DataGridView targetGridView);
     }
 }
