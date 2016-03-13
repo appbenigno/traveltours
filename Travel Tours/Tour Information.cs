@@ -47,7 +47,7 @@ namespace Travel_Tours
             {
 
                 SQL_Lib.Query AddTour = new SQL_Lib.Query();
-                AddTour.Add(1002, textBox_CompanyInfo.Text, dateTimePicker_START.ToString(), dateTimePicker_END.ToString(), int.Parse(textBox_PAX.Text), int.Parse(textBox_Num_Tour_Guides.Text), int.Parse(textBox_Num_Buses.Text));
+                AddTour.Add(1002, textBox_CompanyInfo.Text, dateTimePicker_START.Value.Date, dateTimePicker_END.Value.Date, int.Parse(textBox_PAX.Text), int.Parse(textBox_Num_Tour_Guides.Text), int.Parse(textBox_Num_Buses.Text));
                 MessageBox.Show("Tour added! you can now put in itineraries, click the 'Itineraries' button to start.");
                 button_ADD_TOUR.Enabled = false;
                 Itineraries_Button.Enabled = true;
@@ -78,6 +78,11 @@ namespace Travel_Tours
         private void button_Clear_Info_Preview_Click(object sender, EventArgs e)
         {
             richTextBox_Preview.ResetText();
+        }
+
+        private void dateTimePicker_START_ValueChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

@@ -11,7 +11,7 @@ namespace SQL_Lib
 {
     interface iQuery
     {
-        void Add(int Tour_Code, string Company_Information, string Tour_Start_Date, string Tour_End_Date, int Number_Of_Passengers, int Number_Of_Tour_Guides, int Number_Of_Buses);
+        void Add(int Tour_Code, string Company_Information, DateTime Tour_Start_Date, DateTime Tour_End_Date, int Number_Of_Passengers, int Number_Of_Tour_Guides, int Number_Of_Buses);
         void Edit(string Value_To_Be_Edited);
         void Delete(int Key_Identifier);
         bool isExist(string tableName, string primaryKeyField, string primaryKeyValue, string targetFieldName, string stringMatch);

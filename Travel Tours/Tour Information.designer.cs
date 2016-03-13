@@ -99,6 +99,7 @@
             this.dateTimePicker_START.Name = "dateTimePicker_START";
             this.dateTimePicker_START.Size = new System.Drawing.Size(200, 20);
             this.dateTimePicker_START.TabIndex = 6;
+            this.dateTimePicker_START.ValueChanged += new System.EventHandler(this.dateTimePicker_START_ValueChanged);
             // 
             // label4
             // 

@@ -39,7 +39,7 @@ namespace SQL_Lib
                 connection = value;
             }
         }
-        public void Add(int Tour_Code, string Company_Information, string Tour_Start_Date, string Tour_End_Date, int Number_Of_Passengers, int Number_Of_Tour_Guides, int Number_Of_Buses)
+        public void Add(int Tour_Code, string Company_Information,DateTime Tour_Start_Date, DateTime Tour_End_Date, int Number_Of_Passengers, int Number_Of_Tour_Guides, int Number_Of_Buses)
         {
             try
             {
@@ -48,8 +48,9 @@ namespace SQL_Lib
                 ADD_COMMAND.CommandType = CommandType.Text;
                 ADD_COMMAND.Connection = ADD_CONNECTION;
                 ADD_COMMAND.Parameters.AddWithValue("@TOUR_CODE", Tour_Code);
-                ADD_COMMAND.Parameters.AddWithValue("@TOUR_START", Tour_Start_Date);
-                ADD_COMMAND.Parameters.AddWithValue("@TOUR_END", Tour_End_Date);
+                // cmd.Parameters.Add("@Birthdate", SqlDbType.Date).Value = dateTimePicker.Value.Date;
+                ADD_COMMAND.Parameters.AddWithValue("@TOUR_START", SqlDbType.Date).Value = Tour_Start_Date.Date;
+                ADD_COMMAND.Parameters.AddWithValue("@TOUR_END", SqlDbType.Date).Value = Tour_End_Date.Date;
                 ADD_COMMAND.Parameters.AddWithValue("@PERSONNEL_TOURED", Company_Information);
                 ADD_COMMAND.Parameters.AddWithValue("@TOTAL_NUMBER_OF_PAX", Number_Of_Passengers);
                 ADD_COMMAND.Parameters.AddWithValue("@TOTAL_NUMBER_OF_BUSES", Number_Of_Buses);
