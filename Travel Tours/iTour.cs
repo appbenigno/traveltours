@@ -65,5 +65,7 @@ namespace Travel_Tours
         /// <param name="targetGridView"></param>
         /// 
         void modifyTourGuides(DataGridView targetGridView);
+
+        void deleteEntry(string selectCommand);
     }
 }

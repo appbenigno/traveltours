@@ -276,6 +276,25 @@ namespace Travel_Tours
             }
         }
 
+        public void deleteEntry(string selectCommand)
+        {
+            SqlConnection conn = new SqlConnection(ConnectString());
+            SqlCommand cmd = new SqlCommand(selectCommand, conn);
+            conn.Open();
+            try
+            {
+                cmd.ExecuteNonQuery();
+            }
+            catch (Exception errDel)
+            {
+                MessageBox.Show(errDel.Message, "", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            finally
+            {
+                conn.Close();
+            }
+        }
+
         /// <summary>
         /// Tours Constructor default
         /// </summary>

@@ -32,8 +32,6 @@
             this.comboBox_Information_Viewer = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
             this.button_Edit_Info = new System.Windows.Forms.Button();
-            this.comboBox_Ordering = new System.Windows.Forms.ComboBox();
-            this.label2 = new System.Windows.Forms.Label();
             this.button_DELETE_INFORMATION = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.Elmanjovin_Database_Viewer)).BeginInit();
             this.SuspendLayout();
@@ -42,9 +40,9 @@
             // 
             this.Elmanjovin_Database_Viewer.AllowUserToAddRows = false;
             this.Elmanjovin_Database_Viewer.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.Elmanjovin_Database_Viewer.Location = new System.Drawing.Point(12, 156);
+            this.Elmanjovin_Database_Viewer.Location = new System.Drawing.Point(12, 127);
             this.Elmanjovin_Database_Viewer.Name = "Elmanjovin_Database_Viewer";
-            this.Elmanjovin_Database_Viewer.Size = new System.Drawing.Size(963, 341);
+            this.Elmanjovin_Database_Viewer.Size = new System.Drawing.Size(963, 370);
             this.Elmanjovin_Database_Viewer.TabIndex = 0;
             // 
             // comboBox_Information_Viewer
@@ -81,37 +79,9 @@
             this.button_Edit_Info.UseVisualStyleBackColor = true;
             this.button_Edit_Info.Click += new System.EventHandler(this.button_Edit_Info_Click);
             // 
-            // comboBox_Ordering
-            // 
-            this.comboBox_Ordering.FormattingEnabled = true;
-            this.comboBox_Ordering.Items.AddRange(new object[] {
-            "By Tour code (ASCENDING)",
-            "By Tour code (DESCENDING)",
-            "By Tour date (ASCENDING)",
-            "By Tour date (DESCENDING)",
-            "By Number of passengers (ASCENDING)",
-            "By Number of passengers (DESCENDING)",
-            "By Tour guide\'s Last name (ASCENDING)",
-            "By Tour guide\'s Last name (DESCENDING)",
-            "By Bus number (ASCENDING)",
-            "By Bus number (DESCENDING)"});
-            this.comboBox_Ordering.Location = new System.Drawing.Point(177, 37);
-            this.comboBox_Ordering.Name = "comboBox_Ordering";
-            this.comboBox_Ordering.Size = new System.Drawing.Size(234, 21);
-            this.comboBox_Ordering.TabIndex = 4;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(177, 21);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(50, 13);
-            this.label2.TabIndex = 5;
-            this.label2.Text = "Order by:";
-            // 
             // button_DELETE_INFORMATION
             // 
-            this.button_DELETE_INFORMATION.Location = new System.Drawing.Point(12, 127);
+            this.button_DELETE_INFORMATION.Location = new System.Drawing.Point(177, 98);
             this.button_DELETE_INFORMATION.Name = "button_DELETE_INFORMATION";
             this.button_DELETE_INFORMATION.Size = new System.Drawing.Size(159, 23);
             this.button_DELETE_INFORMATION.TabIndex = 6;
@@ -125,8 +95,6 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(987, 509);
             this.Controls.Add(this.button_DELETE_INFORMATION);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.comboBox_Ordering);
             this.Controls.Add(this.button_Edit_Info);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.comboBox_Information_Viewer);
@@ -148,8 +116,6 @@
         private System.Windows.Forms.ComboBox comboBox_Information_Viewer;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button button_Edit_Info;
-        private System.Windows.Forms.ComboBox comboBox_Ordering;
-        private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button button_DELETE_INFORMATION;
     }
 }

@@ -61,7 +61,20 @@ namespace Travel_Tours
 
         private void button_DELETE_INFORMATION_Click(object sender, EventArgs e)
         {
-
+            if (MessageBox.Show("Are you sure you want to delete this row?","Confirm delete",MessageBoxButtons.YesNo,MessageBoxIcon.Question) == DialogResult.Yes)
+            {
+                int selectedIndex = Elmanjovin_Database_Viewer.SelectedCells[0].RowIndex;
+                string primaryKey = Elmanjovin_Database_Viewer.Rows[selectedIndex].Cells["TOUR_CODE"].Value.ToString();
+                tour.Command = "delete from BUS_INFORMATION where TOUR_CODE = " + primaryKey;
+                tour.deleteEntry(tour.Command);
+                tour.Command = "delete from TOUR_GUIDES where TOUR_CODE = " + primaryKey;
+                tour.deleteEntry(tour.Command);
+                tour.Command = "delete from ITINERARY_INFORMATION where TOUR_CODE = " + primaryKey;
+                tour.deleteEntry(tour.Command);
+                tour.Command = "delete from TOUR_INFORMATION where TOUR_CODE = " + primaryKey;
+                tour.deleteEntry(tour.Command);
+                tour.display(comboBox_Information_Viewer, Elmanjovin_Database_Viewer);
+            }
         }
     }
 }
