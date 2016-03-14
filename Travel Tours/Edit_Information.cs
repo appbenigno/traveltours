@@ -53,7 +53,8 @@ namespace Travel_Tours
 
         private void button_EDIT_INFO_Click(object sender, EventArgs e)
         {
-            
+            tour.modifyTourInfo(dataGrid_EDIT_TOURINFO);
+            tour.viewTourInfo(dataGrid_EDIT_TOURINFO);
         }
 
         private void tabBusInfo_Click(object sender, EventArgs e)
@@ -77,6 +78,7 @@ namespace Travel_Tours
 
         private void Edit_Information_Load(object sender, EventArgs e)
         {
+            tour.viewTourInfo(dataGrid_EDIT_TOURINFO);
             tour.viewTourGuides(dataGridView_EDIT_TOUR_GUIDES);
             tour.viewBusInfo(dataGridView_EDIT_BUS_INFO);
             tour.viewItineraryInfo(dataGridView_EDIT_IT_INFO);

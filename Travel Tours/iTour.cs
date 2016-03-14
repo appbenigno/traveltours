@@ -39,7 +39,7 @@ namespace Travel_Tours
         void viewTourGuides(DataGridView targetGridView);
 
         /// <summary>
-        /// Modify Tour Information
+        /// Modify Tour Info
         /// </summary>
         /// <param name="targetGridView"></param>
         /// 

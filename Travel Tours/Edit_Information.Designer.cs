@@ -31,18 +31,6 @@
             this.tabControl_TourInfo = new System.Windows.Forms.TabControl();
             this.tabTourInfo = new System.Windows.Forms.TabPage();
             this.button_EDIT_INFO = new System.Windows.Forms.Button();
-            this.textBox_EDIT_Name_Descripotion = new System.Windows.Forms.TextBox();
-            this.textBox_EDIT_BUSES = new System.Windows.Forms.TextBox();
-            this.textBox_EDIT_TOUR_GUIDES = new System.Windows.Forms.TextBox();
-            this.textBox_EDIT_PAX = new System.Windows.Forms.TextBox();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.dateTimePicker_END_EDIT = new System.Windows.Forms.DateTimePicker();
-            this.label3 = new System.Windows.Forms.Label();
-            this.dateTimePicker_EDIT = new System.Windows.Forms.DateTimePicker();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
             this.tabTourItinerary = new System.Windows.Forms.TabPage();
             this.button_EDIT_ITINERARY = new System.Windows.Forms.Button();
             this.dataGridView_EDIT_IT_INFO = new System.Windows.Forms.DataGridView();
@@ -52,6 +40,7 @@
             this.tabBusInfo = new System.Windows.Forms.TabPage();
             this.button_EDIT_BUS_INFORMATION = new System.Windows.Forms.Button();
             this.dataGridView_EDIT_BUS_INFO = new System.Windows.Forms.DataGridView();
+            this.dataGrid_EDIT_TOURINFO = new System.Windows.Forms.DataGridView();
             this.tabControl_TourInfo.SuspendLayout();
             this.tabTourInfo.SuspendLayout();
             this.tabTourItinerary.SuspendLayout();
@@ -60,6 +49,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView_EDIT_TOUR_GUIDES)).BeginInit();
             this.tabBusInfo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView_EDIT_BUS_INFO)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGrid_EDIT_TOURINFO)).BeginInit();
             this.SuspendLayout();
             // 
             // tabControl_TourInfo
@@ -77,19 +67,8 @@
             // 
             // tabTourInfo
             // 
+            this.tabTourInfo.Controls.Add(this.dataGrid_EDIT_TOURINFO);
             this.tabTourInfo.Controls.Add(this.button_EDIT_INFO);
-            this.tabTourInfo.Controls.Add(this.textBox_EDIT_Name_Descripotion);
-            this.tabTourInfo.Controls.Add(this.textBox_EDIT_BUSES);
-            this.tabTourInfo.Controls.Add(this.textBox_EDIT_TOUR_GUIDES);
-            this.tabTourInfo.Controls.Add(this.textBox_EDIT_PAX);
-            this.tabTourInfo.Controls.Add(this.label6);
-            this.tabTourInfo.Controls.Add(this.label5);
-            this.tabTourInfo.Controls.Add(this.label4);
-            this.tabTourInfo.Controls.Add(this.dateTimePicker_END_EDIT);
-            this.tabTourInfo.Controls.Add(this.label3);
-            this.tabTourInfo.Controls.Add(this.dateTimePicker_EDIT);
-            this.tabTourInfo.Controls.Add(this.label2);
-            this.tabTourInfo.Controls.Add(this.label1);
             this.tabTourInfo.Location = new System.Drawing.Point(4, 22);
             this.tabTourInfo.Name = "tabTourInfo";
             this.tabTourInfo.Padding = new System.Windows.Forms.Padding(3);
@@ -107,102 +86,6 @@
             this.button_EDIT_INFO.Text = "EDIT INFORMATION";
             this.button_EDIT_INFO.UseVisualStyleBackColor = true;
             this.button_EDIT_INFO.Click += new System.EventHandler(this.button_EDIT_INFO_Click);
-            // 
-            // textBox_EDIT_Name_Descripotion
-            // 
-            this.textBox_EDIT_Name_Descripotion.Location = new System.Drawing.Point(6, 53);
-            this.textBox_EDIT_Name_Descripotion.Name = "textBox_EDIT_Name_Descripotion";
-            this.textBox_EDIT_Name_Descripotion.Size = new System.Drawing.Size(200, 20);
-            this.textBox_EDIT_Name_Descripotion.TabIndex = 11;
-            // 
-            // textBox_EDIT_BUSES
-            // 
-            this.textBox_EDIT_BUSES.Location = new System.Drawing.Point(6, 357);
-            this.textBox_EDIT_BUSES.Name = "textBox_EDIT_BUSES";
-            this.textBox_EDIT_BUSES.Size = new System.Drawing.Size(37, 20);
-            this.textBox_EDIT_BUSES.TabIndex = 10;
-            // 
-            // textBox_EDIT_TOUR_GUIDES
-            // 
-            this.textBox_EDIT_TOUR_GUIDES.Location = new System.Drawing.Point(6, 296);
-            this.textBox_EDIT_TOUR_GUIDES.Name = "textBox_EDIT_TOUR_GUIDES";
-            this.textBox_EDIT_TOUR_GUIDES.Size = new System.Drawing.Size(37, 20);
-            this.textBox_EDIT_TOUR_GUIDES.TabIndex = 9;
-            // 
-            // textBox_EDIT_PAX
-            // 
-            this.textBox_EDIT_PAX.Location = new System.Drawing.Point(6, 226);
-            this.textBox_EDIT_PAX.Name = "textBox_EDIT_PAX";
-            this.textBox_EDIT_PAX.Size = new System.Drawing.Size(37, 20);
-            this.textBox_EDIT_PAX.TabIndex = 8;
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(3, 341);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(96, 13);
-            this.label6.TabIndex = 7;
-            this.label6.Text = "Number of Bus/es:";
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(3, 280);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(178, 13);
-            this.label5.TabIndex = 6;
-            this.label5.Text = "Number of Tour Guides/Facilitators: ";
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(3, 210);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(108, 13);
-            this.label4.TabIndex = 5;
-            this.label4.Text = "Total number of Pax: ";
-            // 
-            // dateTimePicker_END_EDIT
-            // 
-            this.dateTimePicker_END_EDIT.Location = new System.Drawing.Point(6, 164);
-            this.dateTimePicker_END_EDIT.Name = "dateTimePicker_END_EDIT";
-            this.dateTimePicker_END_EDIT.Size = new System.Drawing.Size(200, 20);
-            this.dateTimePicker_END_EDIT.TabIndex = 4;
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(3, 148);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(90, 13);
-            this.label3.TabIndex = 3;
-            this.label3.Text = "End date of Tour:";
-            // 
-            // dateTimePicker_EDIT
-            // 
-            this.dateTimePicker_EDIT.Location = new System.Drawing.Point(6, 102);
-            this.dateTimePicker_EDIT.Name = "dateTimePicker_EDIT";
-            this.dateTimePicker_EDIT.Size = new System.Drawing.Size(200, 20);
-            this.dateTimePicker_EDIT.TabIndex = 2;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(3, 86);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(70, 13);
-            this.label2.TabIndex = 1;
-            this.label2.Text = "Date of Tour:";
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(3, 37);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(208, 13);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Name of Company/Personnel/School etc: ";
             // 
             // tabTourItinerary
             // 
@@ -303,6 +186,16 @@
             this.dataGridView_EDIT_BUS_INFO.Size = new System.Drawing.Size(580, 414);
             this.dataGridView_EDIT_BUS_INFO.TabIndex = 0;
             // 
+            // dataGrid_EDIT_TOURINFO
+            // 
+            this.dataGrid_EDIT_TOURINFO.AllowUserToAddRows = false;
+            this.dataGrid_EDIT_TOURINFO.AllowUserToDeleteRows = false;
+            this.dataGrid_EDIT_TOURINFO.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGrid_EDIT_TOURINFO.Location = new System.Drawing.Point(6, 6);
+            this.dataGrid_EDIT_TOURINFO.Name = "dataGrid_EDIT_TOURINFO";
+            this.dataGrid_EDIT_TOURINFO.Size = new System.Drawing.Size(580, 414);
+            this.dataGrid_EDIT_TOURINFO.TabIndex = 13;
+            // 
             // Edit_Information
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -316,13 +209,13 @@
             this.Load += new System.EventHandler(this.Edit_Information_Load);
             this.tabControl_TourInfo.ResumeLayout(false);
             this.tabTourInfo.ResumeLayout(false);
-            this.tabTourInfo.PerformLayout();
             this.tabTourItinerary.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView_EDIT_IT_INFO)).EndInit();
             this.tabTourGuides.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView_EDIT_TOUR_GUIDES)).EndInit();
             this.tabBusInfo.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView_EDIT_BUS_INFO)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGrid_EDIT_TOURINFO)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -334,18 +227,6 @@
         private System.Windows.Forms.TabPage tabTourGuides;
         private System.Windows.Forms.TabPage tabBusInfo;
         private System.Windows.Forms.TabPage tabTourInfo;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.DateTimePicker dateTimePicker_EDIT;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.DateTimePicker dateTimePicker_END_EDIT;
-        private System.Windows.Forms.TextBox textBox_EDIT_Name_Descripotion;
-        private System.Windows.Forms.TextBox textBox_EDIT_BUSES;
-        private System.Windows.Forms.TextBox textBox_EDIT_TOUR_GUIDES;
-        private System.Windows.Forms.TextBox textBox_EDIT_PAX;
         private System.Windows.Forms.Button button_EDIT_INFO;
         private System.Windows.Forms.Button button_EDIT_ITINERARY;
         private System.Windows.Forms.DataGridView dataGridView_EDIT_IT_INFO;
@@ -353,5 +234,6 @@
         private System.Windows.Forms.DataGridView dataGridView_EDIT_TOUR_GUIDES;
         private System.Windows.Forms.Button button_EDIT_BUS_INFORMATION;
         private System.Windows.Forms.DataGridView dataGridView_EDIT_BUS_INFO;
+        private System.Windows.Forms.DataGridView dataGrid_EDIT_TOURINFO;
     }
 }
