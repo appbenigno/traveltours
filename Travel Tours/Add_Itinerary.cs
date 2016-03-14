@@ -20,6 +20,23 @@ namespace Travel_Tours
 
         private void button_ADD_INFO_Click(object sender, EventArgs e)
         {
+            try
+            {
+                Query ADD_ITINERARY_DATABASE = new Query(new Connections(".\\SQLEXPRESS", "ELMANJOVIN_TRAVEL_AND_TOURS"));
+                Query ADD_TOUR_GUIDES = new Query(new Connections(".\\SQLEXPRESS", "ELMANJOVIN_TRAVEL_AND_TOURS"));
+                Query ADD_BUS_INFORMATION = new Query(new Connections(".\\SQLEXPRESS", "ELMANJOVIN_TRAVEL_AND_TOURS"));
+                ADD_ITINERARY_DATABASE.ADD_ITINERARY(dataGridView_Tour_Itineraries);
+                ADD_TOUR_GUIDES.ADD_TOUR_GUIDE(dataGridView_Tour_Guide_Information);
+                ADD_BUS_INFORMATION.BUS_INFORMATION(dataGridView_Bus_Information);
+
+                MessageBox.Show("Informations Successfully added!");
+            }
+            catch(Exception ADD_ITINERARY)
+            {
+                MessageBox.Show("Error: " + ADD_ITINERARY.Message.ToString());
+            }
+            
+
           /*  string StrQuery;
 try
 {
